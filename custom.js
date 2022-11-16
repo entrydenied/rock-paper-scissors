@@ -5,8 +5,6 @@ function getComputerChoice () {
 
 }
 
-let choice = prompt("Please make your selection of rock, paper, or scissors!")
-
 function playRound(playerSelection, computerSelection) {
     
 }
@@ -17,6 +15,8 @@ const options = ['rock', 'paper', 'scissors'];
 
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
+
+let choice = prompt("Please make your selection of rock, paper, or scissors!")
 
 function game(choice, playRound) {
 
