@@ -34,13 +34,15 @@ console.log(playRound(playerSelection, computerSelection));
 
 
 function game(playRound) {
+    for (let i = 0; i < 5; i++) {
 
+    }
 }
+
+
+
 /** 
 
-for (let i = 0; i < 5; i++) {
-
-}
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
