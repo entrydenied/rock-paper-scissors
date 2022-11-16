@@ -66,7 +66,7 @@ function game(playRound) {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
         const computerSelection = getComputerChoice(array);
-        let roundResult = playRound(playerChoice, computerSelection);
+        let roundResult = playRound(playerSelection, computerSelection);
         console.log(roundResult);
         gameScore(roundResult);
         console.log("The score is " + playerScore + "-" + computerScore);
@@ -79,6 +79,7 @@ function game(playRound) {
     }
 }
 
+console.log(game(playRound));
 
 
 /** 
