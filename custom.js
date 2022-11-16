@@ -35,7 +35,7 @@ function playRound(playerSelection, computerSelection) {
         return playerWinRound;
 
     } else { 
-        return computerWin;
+        return computerWinRound;
 
     }
 }
@@ -54,7 +54,7 @@ function gameScore() {
 
     if (result === playerWinRound) {
         playerScore++;
-    } else if (result === computerWin) {
+    } else if (result === computerWinRound) {
         computerScore++;
     } else {
         draws++;
