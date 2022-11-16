@@ -1,15 +1,15 @@
 function getComputerChoice (arr) {
-    const random = Math.floor(Math.random() * options.length);
-    return (random, options[random]);
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    const item = arr[randomIndex];
+    return item;
 }
 
 const array = ['rock', 'paper', 'scissors'];
 
-//console.log(random, options[random]);
+const computerSelection = getComputerChoice(array);
+//console.log(computerSelection);
 
 const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-
  
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == getComputerChoice) {
