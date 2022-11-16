@@ -1,3 +1,8 @@
+let playerScore = 0;
+let computerScore = 0;
+let draws = 0;
+
+// Computer choice
 function getComputerChoice (arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     const item = arr[randomIndex];
@@ -6,21 +11,24 @@ function getComputerChoice (arr) {
 
 const array = ['rock', 'paper', 'scissors'];
 
-const computerSelection = getComputerChoice(array);
+
 //console.log(computerSelection);
 
-let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
 
+
+
+// Round/Game win/loss messages
 let playerWinRound = "You win the round!"
 let computerWinRound = "You lost the round!"
 let draw = "Draw!"
 let playerWin = "You won the game!"
 let computerWin = "You lost the game!"
- 
+
+// Plays one round of Rock, Paper, Scissors
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return draw;    
-          
+
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
         return playerWinRound;
 
@@ -36,11 +44,15 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-//console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection, computerSelection));
 
 function game(playRound) {
     for (let i = 0; i < 5; i++) {
-        if ()
+        let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+        const computerSelection = getComputerChoice(array);
+        let roundResult = playRound(playerChoice, computerSelection);
+        console.log(roundResult);
+
     }
 }
 
