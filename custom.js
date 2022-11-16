@@ -1,15 +1,21 @@
-function playRound(playerSelection, computerSelection) {
+let choice = prompt("Please make your selection of rock, paper, or scissors!")
 
+function playRound(playerSelection, computerSelection) {
+    
 }
 
 const options = ['rock', 'paper', 'scissors'];
 
-const randomElement = array[Math.floor(Math.random() * array.length)]
-
-let choice = prompt("Please make your selection!")
+const random = Math.floor(Math.random() * options.length)
+//console.log(random, options[random]);
 
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
+
+function game(choice, playRound) {
+    
+}
+
 console.log(playRound(playerSelection, computerSelection));
 
 /**
