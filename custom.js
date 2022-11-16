@@ -70,10 +70,12 @@ function game(playRound) {
         gameScore(roundResult);
         console.log("The score is " + playerScore + "-" + computerScore);
 
-        if (playerScore + computerScore <= 5 && playerScore > computerScore) {
+        if (i > 5 && playerScore > computerScore) {
             console.log("You've won the game " + playerScore + "-" + computerScore + ". Congratulations!!!");
-        } else if (playerScore + computerScore >= 5 && playerScore > computerScore) {
+        } else if (i > 5 && playerScore > computerScore) {
             console.log("You've lost the game " + playerScore + "-" + computerScore+ ". Nice try.");
+        } else if (i > 5 && playerScore === computerScore) {
+            console.log("It's a tie!")
         }
     }
 }
