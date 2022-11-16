@@ -1,7 +1,3 @@
-let playerScore = 0;
-let computerScore = 0;
-let draws = 0;
-
 // Computer choice
 function getComputerChoice (arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
@@ -44,7 +40,23 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+//console.log(playRound(playerSelection, computerSelection));
+
+let playerScore = 0;
+let computerScore = 0;
+let draws = 0;
+
+function gameScore() {
+    let result = playRound()
+
+    if (result === playerWinRound) {
+        playerScore++;
+    } else if (result === computerWin) {
+        computerScore++;
+    } else {
+        draws++;
+    }
+}
 
 function game(playRound) {
     for (let i = 0; i < 5; i++) {
