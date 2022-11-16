@@ -9,7 +9,7 @@ const array = ['rock', 'paper', 'scissors'];
 const computerSelection = getComputerChoice(array);
 //console.log(computerSelection);
 
-let playerSelection = prompt("Please make your selection of rock, paper, or scissors!");
+let playerSelection = prompt("Rock, paper, or scissors?");
 playerSelection = playerSelection.toLowerCase();
  
 function playRound(playerSelection, computerSelection) {
@@ -31,6 +31,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 console.log(playRound(playerSelection, computerSelection));
+
+let playerScore = 0;
+let computerScore = 0;
+let draws = 0;
+let gameScore
 
 
 function game(playRound) {
