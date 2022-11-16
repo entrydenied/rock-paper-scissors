@@ -33,7 +33,7 @@ console.log(playRound(playerSelection, computerSelection));
 
 
 
-let choice = prompt("Please make your selection of rock, paper, or scissors!")
+// let choice = prompt("Please make your selection of rock, paper, or scissors!")
 
 function game(choice, playRound) {
 
