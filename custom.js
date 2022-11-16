@@ -9,8 +9,7 @@ const array = ['rock', 'paper', 'scissors'];
 const computerSelection = getComputerChoice(array);
 //console.log(computerSelection);
 
-let playerSelection = prompt("Rock, paper, or scissors?");
-playerSelection = playerSelection.toLowerCase();
+let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
  
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
@@ -30,14 +29,11 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
-
-
-
+//console.log(playRound(playerSelection, computerSelection));
 
 function game(playRound) {
     for (let i = 0; i < 5; i++) {
-        
+        if ()
     }
 }
 
