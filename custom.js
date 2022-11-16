@@ -42,10 +42,13 @@ function playRound(playerSelection, computerSelection) {
 
 //console.log(playRound(playerSelection, computerSelection));
 
+
+// Global score definitions
 let playerScore = 0;
 let computerScore = 0;
 let draws = 0;
 
+// Keeps track of the Rock, Paper, Scissors game score
 function gameScore() {
     let result = playRound()
 
@@ -58,13 +61,21 @@ function gameScore() {
     }
 }
 
+// Plays 5 rounds of Rock, Paper, Scissors
 function game(playRound) {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
         const computerSelection = getComputerChoice(array);
         let roundResult = playRound(playerChoice, computerSelection);
         console.log(roundResult);
+        gameScore(roundResult);
+        console.log("The score is " + playerScore + "-" + computerScore);
 
+        if (i === 5 && playerScore > computerScore) {
+            console.log("You've won the game " + playerScore + "-" + computerScore + ". Congratulations!!!");
+        } else if (i === 5 && playerScore > computerScore) {
+            console.log("You've lost the game " + playerScore + "-" + computerScore+ ". Nice try.");
+        }
     }
 }
 
