@@ -10,6 +10,7 @@ const computerSelection = getComputerChoice(array);
 //console.log(computerSelection);
 
 let playerSelection = prompt("Please make your selection of rock, paper, or scissors!");
+playerSelection = playerSelection.toLowerCase();
  
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
