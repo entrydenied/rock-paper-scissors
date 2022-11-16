@@ -32,22 +32,22 @@ function playRound(playerSelection, computerSelection) {
 
 console.log(playRound(playerSelection, computerSelection));
 
-let playerScore = 0;
-let computerScore = 0;
-let draws = 0;
-let gameScore
+
 
 
 function game(playRound) {
     for (let i = 0; i < 5; i++) {
-
+        
     }
 }
 
 
 
 /** 
-
+let playerScore = 0;
+let computerScore = 0;
+let draws = 0;
+let gameScore = ;
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
