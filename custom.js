@@ -119,64 +119,6 @@ function playRound(playerSelection, computerSelection) {
     (computerSelection == "scissors" && playerSelection == "paper") ||
     (computerSelection == "paper" && playerSelection == "rock")
   ) {
-    computerScore = ++computerScore;
-    keepCpuScore();
-    if (computerScore === 1) {
-      displayResults(
-        `Oh no! You lost.
-        ${capitalize(computerSelection)} beats ${playerSelection}.`
-      );
-    } else if (computerScore === 2) {
-      displayResults(
-        `Arghh. ${capitalize(
-          computerSelection
-        )} beats ${playerSelection}. Give it another shot!`
-      );
-    } else if (computerScore === 3) {
-      displayResults(
-        `${capitalize(
-          computerSelection
-        )} beats ${playerSelection}. It's ok. You got this!!`
-      );
-    } else if (computerScore === 4) {
-      displayResults(
-        `Oh no. It's match point!! ${capitalize(
-          computerSelection
-        )} beats ${playerSelection}. Don't let us down!`
-      );
-    } else {
-      displayResults(`${computerSelection} beats ${playerSelection}`);
-    }
-  } else {
-    playerScore = ++playerScore;
-    keepPlayerScore();
-    if (playerScore === 1) {
-      displayResults(
-        `Lets go!!! You won.
-        ${capitalize(playerSelection)} beats ${computerSelection}.`
-      );
-    } else if (playerScore === 2) {
-      displayResults(
-        `You're pretty good at this. ${capitalize(
-          playerSelection
-        )} beats ${computerSelection}.`
-      );
-    } else if (playerScore === 3) {
-      displayResults(
-        `${capitalize(
-          playerSelection
-        )} beats ${computerSelection}! Has mankind found its savior??`
-      );
-    } else if (playerScore === 4) {
-      displayResults(
-        `${capitalize(
-          playerSelection
-        )} beats ${computerSelection}. One more and you're a hero!`
-      );
-    } else {
-      displayResults(`${playerSelection} beats ${computerSelection}`);
-    }
-  }
-}
+
 
 */
