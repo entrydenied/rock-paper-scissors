@@ -49,8 +49,7 @@ let computerScore = 0;
 let draws = 0;
 
 // Keeps track of the Rock, Paper, Scissors game score
-function gameScore() {
-    let result = playRound()
+function gameScore(result) {
 
     if (result === playerWinRound) {
         playerScore++;
@@ -71,9 +70,9 @@ function game(playRound) {
         gameScore(roundResult);
         console.log("The score is " + playerScore + "-" + computerScore);
 
-        if (i === 5 && playerScore > computerScore) {
+        if (playerScore + computerScore <= 5 && playerScore > computerScore) {
             console.log("You've won the game " + playerScore + "-" + computerScore + ". Congratulations!!!");
-        } else if (i === 5 && playerScore > computerScore) {
+        } else if (playerScore + computerScore >= 5 && playerScore > computerScore) {
             console.log("You've lost the game " + playerScore + "-" + computerScore+ ". Nice try.");
         }
     }
