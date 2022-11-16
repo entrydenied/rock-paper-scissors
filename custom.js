@@ -8,7 +8,7 @@ function getComputerChoice () {
 function playRound(playerSelection, computerSelection) {
     
 }
-
+/**
 const options = ['rock', 'paper', 'scissors'];
 
 
@@ -24,7 +24,7 @@ function game(choice, playRound) {
 
 console.log(playRound(playerSelection, computerSelection));
 
-/**
+
 for (let i = 0; i < 5; i++) {
 
 }
