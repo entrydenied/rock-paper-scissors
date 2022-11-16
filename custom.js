@@ -9,7 +9,7 @@ const array = ['rock', 'paper', 'scissors'];
 const computerSelection = getComputerChoice(array);
 //console.log(computerSelection);
 
-const playerSelection = "rock";
+let playerSelection = prompt("Please make your selection of rock, paper, or scissors!");
  
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
@@ -17,15 +17,15 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == ("rock") && computerSelection == "scissors") {
         console.log("You Win! Rock beats Scissors!")
     } else if (playerSelection == ("rock") && computerSelection == "paper") {
-        console.log("You Lose! Paper beats Rock!")
+        console.log("You Lose! Rock loses to Paper!")
     } else if (playerSelection == ("paper") && computerSelection == "rock") {
         console.log("You Win! Paper beats Rock!")
     } else if (playerSelection == ("paper") && computerSelection == "scissors") {
-        console.log("You Lose! Scissors beats Paper!")
+        console.log("You Lose! Paper loses to Scissors!")
     } else if (playerSelection == ("scissors") && computerSelection == "paper") {
         console.log("You Win! Scissors beats Paper!")
     } else if (playerSelection == ("scissors") && computerSelection == "rock") {
-        console.log("You Lose! Rock beats Scissors!")
+        console.log("You Lose! Scissors loses to Paper!")
     }
 }
 
