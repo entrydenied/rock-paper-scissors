@@ -1,3 +1,11 @@
+// Global score definitions
+let playerScore = 0;
+let computerScore = 0;
+let draws = 0;
+const rockButton = document.querySelector('.rock');
+const paperButton = document.querySelector('.paper');
+const scissorsButton = document.querySelector('.scissors');
+
 // Computer choice
 function getComputerChoice (arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
@@ -36,11 +44,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// Global score definitions
-let playerScore = 0;
-let computerScore = 0;
-let draws = 0;
-
 // Keeps track of the Rock, Paper, Scissors game score
 function gameScore(result) {
 
@@ -74,16 +77,7 @@ function gameScore(result) {
 //     }    
 // }
 
-const btn = document.querySelector('#button');
-btn.addEventListener('click', ()=> {
-    console.log("Ayy we clickin");
-})
 
-window.addEventListener('click', playRound);
-
-const rockButton = document.querySelector('.rock');
-const paperButton = document.querySelector('.paper');
-const scissorsButton = document.querySelector('.scissors');
 
 rockButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice(array);
@@ -93,6 +87,15 @@ rockButton.addEventListener('click', () => {
 })
 
 /**  
+
+const btn = document.querySelector('#button');
+btn.addEventListener('click', ()=> {
+    console.log("Ayy we clickin");
+})
+
+window.addEventListener('click', playRound);
+
+
 const btns = document.querySelectorAll('.btn');
 
 
