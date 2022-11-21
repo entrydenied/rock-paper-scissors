@@ -16,8 +16,6 @@ let computerWin = "You lost the game!"
 
 // Plays one round of Rock, Paper, Scissors
 
-let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
-const computerSelection = getComputerChoice(array);
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
@@ -55,31 +53,36 @@ function gameScore(result) {
     }
 }
 
+// Plays 5 rounds of Rock, Paper, Scissors
+
+function game(playRound) {
+//    for (let i = 0; i < 5; i++) {
+//        let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+//        const computerSelection = getComputerChoice(array);
+//        let roundResult = playRound(playerSelection, computerSelection);
+//        console.log(roundResult);
+//        gameScore(roundResult);
+//        console.log("The score is " + playerScore + "-" + computerScore);
+//    }
+
+ if (playerScore > computerScore) {
+    console.log("You've won the game. Congratulations!!!");
+    } else if (playerScore < computerScore) {
+        console.log("You've lost the game. Nice try.");
+    } else {
+        console.log("It's a tie!");
+    }    
+}
+/** 
 const btn = document.querySelector('#btn');
-btn.addEventListener('click', () => {
+btn.addEventListener('click', ()=> {
     console.log("Ayy we clickin");
 })
 
 window.addEventListener('click', playRound);
 
-
-
-/** 
+ 
 const btns = document.querySelectorAll('.btn');
-
-
-// Plays 5 rounds of Rock, Paper, Scissors
-
-function game(playRound) {
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
-        const computerSelection = getComputerChoice(array);
-        let roundResult = playRound(playerSelection, computerSelection);
-        console.log(roundResult);
-        gameScore(roundResult);
-        console.log("The score is " + playerScore + "-" + computerScore);
-    }
-}
 
 
  if (i => 5 && playerScore > computerScore) {
@@ -90,9 +93,7 @@ function game(playRound) {
         } else if (5 >= i && playerScore === computerScore) {
             } else if (5 >= i && playerScore === computerScore) {
             console.log("It's a tie!");
-        }
-    }
-}
+        }   
 
  */
 
