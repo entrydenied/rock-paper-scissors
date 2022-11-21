@@ -52,6 +52,7 @@ function gameScore(result) {
 }
 
 // Plays 5 rounds of Rock, Paper, Scissors
+/** 
 function game(playRound) {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
@@ -63,7 +64,7 @@ function game(playRound) {
     }
 }
 
-/**
+
  if (i => 5 && playerScore > computerScore) {
             console.log("You've won the game " + playerScore + "-" + computerScore + ". Congratulations!!!");
         } else if (5 >= i && playerScore > computerScore) {
