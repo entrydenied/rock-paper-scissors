@@ -51,6 +51,11 @@ function gameScore(result) {
     }
 }
 
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+    console.log("Ayy we clickin")
+})
+
 // Plays 5 rounds of Rock, Paper, Scissors
 /** 
 function game(playRound) {
