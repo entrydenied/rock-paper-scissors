@@ -63,5 +63,21 @@ function game(playRound) {
     }
 }
 
+/**
+ if (i => 5 && playerScore > computerScore) {
+            console.log("You've won the game " + playerScore + "-" + computerScore + ". Congratulations!!!");
+        } else if (5 >= i && playerScore > computerScore) {
+            } else if (5 >= i && playerScore > computerScore) {
+            console.log("You've lost the game " + playerScore + "-" + computerScore+ ". Nice try.");
+        } else if (5 >= i && playerScore === computerScore) {
+            } else if (5 >= i && playerScore === computerScore) {
+            console.log("It's a tie!");
+        }
+    }
+}
+
+ */
+
+// Runs the game
 console.log(game(playRound));
 
