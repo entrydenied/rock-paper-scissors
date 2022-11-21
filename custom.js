@@ -64,16 +64,19 @@ function game(playRound) {
 //        gameScore(roundResult);
 //        console.log("The score is " + playerScore + "-" + computerScore);
 //    }
+    const rockButton = document.querySelector('.rock');
+    const paperButton = document.querySelector('.paper');
+    const scissorsButton = document.querySelector('.scissors');
 
- if (playerScore > computerScore) {
-    console.log("You've won the game. Congratulations!!!");
-    } else if (playerScore < computerScore) {
+    if (playerScore > computerScore) {
+        console.log("You've won the game. Congratulations!!!");
+     } else if (playerScore < computerScore) {
         console.log("You've lost the game. Nice try.");
-    } else {
+     } else {
         console.log("It's a tie!");
-    }    
+     }    
 }
-/** 
+
 const btn = document.querySelector('#btn');
 btn.addEventListener('click', ()=> {
     console.log("Ayy we clickin");
@@ -81,7 +84,7 @@ btn.addEventListener('click', ()=> {
 
 window.addEventListener('click', playRound);
 
- 
+/**  
 const btns = document.querySelectorAll('.btn');
 
 
