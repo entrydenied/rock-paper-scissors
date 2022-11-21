@@ -15,6 +15,10 @@ let playerWin = "You won the game!"
 let computerWin = "You lost the game!"
 
 // Plays one round of Rock, Paper, Scissors
+
+let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+const computerSelection = getComputerChoice(array);
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return draw;    
@@ -53,11 +57,19 @@ function gameScore(result) {
 
 const btn = document.querySelector('#btn');
 btn.addEventListener('click', () => {
-    console.log("Ayy we clickin")
+    console.log("Ayy we clickin");
 })
 
-// Plays 5 rounds of Rock, Paper, Scissors
+window.addEventListener('click', playRound);
+
+
+
 /** 
+const btns = document.querySelectorAll('.btn');
+
+
+// Plays 5 rounds of Rock, Paper, Scissors
+
 function game(playRound) {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
