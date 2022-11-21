@@ -55,7 +55,7 @@ function gameScore(result) {
 
 // Plays 5 rounds of Rock, Paper, Scissors
 
-function game(playRound) {
+// function game(playRound) {
 //    for (let i = 0; i < 5; i++) {
 //        let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
 //        const computerSelection = getComputerChoice(array);
@@ -64,25 +64,33 @@ function game(playRound) {
 //        gameScore(roundResult);
 //        console.log("The score is " + playerScore + "-" + computerScore);
 //    }
-    const rockButton = document.querySelector('.rock');
-    const paperButton = document.querySelector('.paper');
-    const scissorsButton = document.querySelector('.scissors');
 
-    if (playerScore > computerScore) {
-        console.log("You've won the game. Congratulations!!!");
-     } else if (playerScore < computerScore) {
-        console.log("You've lost the game. Nice try.");
-     } else {
-        console.log("It's a tie!");
-     }    
-}
+//    if (playerScore > computerScore) {
+//        console.log("You've won the game. Congratulations!!!");
+//     } else if (playerScore < computerScore) {
+//        console.log("You've lost the game. Nice try.");
+//     } else {
+//        console.log("It's a tie!");
+//     }    
+// }
 
-const btn = document.querySelector('#btn');
+const btn = document.querySelector('#button');
 btn.addEventListener('click', ()=> {
     console.log("Ayy we clickin");
 })
 
 window.addEventListener('click', playRound);
+
+const rockButton = document.querySelector('.rock');
+const paperButton = document.querySelector('.paper');
+const scissorsButton = document.querySelector('.scissors');
+
+rockButton.addEventListener('click', () => {
+    const computerSelection = getComputerChoice(array);
+    const playerSelection = "rock";
+    playRound(playerSelection, computerSelection)
+
+})
 
 /**  
 const btns = document.querySelectorAll('.btn');
