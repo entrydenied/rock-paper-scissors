@@ -5,6 +5,9 @@ let draws = 0;
 const rockButton = document.querySelector('.rock');
 const paperButton = document.querySelector('.paper');
 const scissorsButton = document.querySelector('.scissors');
+const outcomeDiv = document.querySelector('.outcome');
+
+
 
 // Computer choice
 function getComputerChoice (arr) {
