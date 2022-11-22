@@ -76,18 +76,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-// Keeps track of the Rock, Paper, Scissors game score
-function gameScore(result) {
-
-    if (result === playerWinRound) {
-        playerScore++;
-    } else if (result === computerWinRound) {
-        computerScore++;
-    } else {
-        draws++;
-    }
-}
-
 // Plays 5 rounds of Rock, Paper, Scissors
 
 // function game(playRound) {
@@ -96,7 +84,6 @@ function gameScore(result) {
 //        const computerSelection = getComputerChoice(array);
 //        let roundResult = playRound(playerSelection, computerSelection);
 //        console.log(roundResult);
-//        gameScore(roundResult);
 //        console.log("The score is " + playerScore + "-" + computerScore);
 //    }
 
@@ -176,6 +163,18 @@ function playRound(playerSelection, computerSelection) {
         const p = document.createElement('p')
         p.innerText = 'computerWinRound'
         outcomeDiv.appendChild(p)
+    }
+}
+
+// Keeps track of the Rock, Paper, Scissors game score
+function gameScore(result) {
+
+    if (result === playerWinRound) {
+        playerScore++;
+    } else if (result === computerWinRound) {
+        computerScore++;
+    } else {
+        draws++;
     }
 }
 
