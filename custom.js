@@ -34,30 +34,50 @@ let computerWin = "You lost the game!"
 
 // Plays one round of Rock, Paper, Scissors
 
-
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         const p = document.createElement('p')
-        p.innerText = 'draw'
+        p.innerText = "It's a tie!"
         outcomeDiv.appendChild(p)
-    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+
+    } else if (playerSelection == ("rock") && computerSelection == "scissors") {
         const p = document.createElement('p')
-        p.innerText = 'playerWinRound'
+        p.innerText = "You Win! Rock beats Scissors!"
         outcomeDiv.appendChild(p)
-    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+        playerScore++
+
+    } else if (playerSelection == ("rock") && computerSelection == "paper") {
         const p = document.createElement('p')
-        p.innerText = 'playerWinRound'
-        outcomeDiv.appendChild(p)
-    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+        p.innerText = 
+        outcomeDiv.appendChild(p)("You Lose! Rock loses to Paper!")
+        computerScore++
+
+    } else if (playerSelection == ("paper") && computerSelection == "rock") {
         const p = document.createElement('p')
-        p.innerText = 'playerWinRound'
+        p.innerText = "You Win! Paper beats Rock!"
         outcomeDiv.appendChild(p)
-    } else { 
+        playerScore++
+
+    } else if (playerSelection == ("paper") && computerSelection == "scissors") {
         const p = document.createElement('p')
-        p.innerText = 'computerWinRound'
+        p.innerText = "You Lose! Paper loses to Scissors!"
         outcomeDiv.appendChild(p)
+        computerScore++
+
+    } else if (playerSelection == ("scissors") && computerSelection == "paper") {
+        const p = document.createElement('p')
+        p.innerText = "You Win! Scissors beats Paper!"
+        outcomeDiv.appendChild(p)
+        playerScore++
+
+    } else if (playerSelection == ("scissors") && computerSelection == "rock") {
+        const p = document.createElement('p')
+        p.innerText = "You Lose! Scissors loses to Paper!"
+        outcomeDiv.appendChild(p)
+        computerScore++
     }
 }
+
 
 // Keeps track of the Rock, Paper, Scissors game score
 function gameScore(result) {
@@ -137,6 +157,30 @@ const btns = document.querySelectorAll('.btn');
             } else if (5 >= i && playerScore === computerScore) {
             console.log("It's a tie!");
         }   
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection == computerSelection) {
+        const p = document.createElement('p')
+        p.innerText = 'draw'
+        outcomeDiv.appendChild(p)
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        const p = document.createElement('p')
+        p.innerText = 'playerWinRound'
+        outcomeDiv.appendChild(p)
+    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+        const p = document.createElement('p')
+        p.innerText = 'playerWinRound'
+        outcomeDiv.appendChild(p)
+    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+        const p = document.createElement('p')
+        p.innerText = 'playerWinRound'
+        outcomeDiv.appendChild(p)
+    } else { 
+        const p = document.createElement('p')
+        p.innerText = 'computerWinRound'
+        outcomeDiv.appendChild(p)
+    }
+}
 
  */
 
