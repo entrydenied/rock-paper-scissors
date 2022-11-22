@@ -84,28 +84,6 @@ const checkForWinner= (playerScore, computerScore) => {
     }
 }
 
-// Plays 5 rounds of Rock, Paper, Scissors
-/** 
-function game(playRound) { 
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
-        const computerSelection = getComputerChoice();
-        let roundResult = playRound(playerSelection, computerSelection);
-        console.log(roundResult);
-        console.log("The score is " + playerScore + "-" + computerScore);
-    }
-
-    if (playerScore > computerScore) {
-        console.log("You've won the game. Congratulations!!!");
-    } else if (playerScore < computerScore) {
-        console.log("You've lost the game. Nice try.");
-    } else {
-        console.log("It's a tie!");
-    }    
-}
-*/
-
-
 rockButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice()
     const playerSelection = 'rock'
@@ -194,6 +172,26 @@ function getComputerChoice (arr) {
 }
 
 const array = ['rock', 'paper', 'scissors'];
+
+// Plays 5 rounds of Rock, Paper, Scissors
+
+function game(playRound) { 
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+        const computerSelection = getComputerChoice();
+        let roundResult = playRound(playerSelection, computerSelection);
+        console.log(roundResult);
+        console.log("The score is " + playerScore + "-" + computerScore);
+    }
+
+    if (playerScore > computerScore) {
+        console.log("You've won the game. Congratulations!!!");
+    } else if (playerScore < computerScore) {
+        console.log("You've lost the game. Nice try.");
+    } else {
+        console.log("It's a tie!");
+    }    
+}
 
 Runs the game
 console.log(game(playRound));
