@@ -5,6 +5,8 @@ const rockButton = document.querySelector('.rock');
 const paperButton = document.querySelector('.paper');
 const scissorsButton = document.querySelector('.scissors');
 const outcomeDiv = document.querySelector('.outcome');
+const playerScoreSpan = document.querySelector('.player-score');
+const computerScoreSpan = document.querySelector('.computer-score');
 
 // Computer choice
 
@@ -26,68 +28,47 @@ const playRound = (playerSelection, computerSelection) => {
         const p = document.createElement('p')
         p.innerText = "It's a tie!"
         outcomeDiv.appendChild(p)
-        const h4 = document.createElement('h4')
-        h4.innerText = "The score is " + playerScore + "-" + computerScore
-        outcomeDiv.appendChild(h4)
 
     } else if (playerSelection == ("rock") && computerSelection == "scissors") {
         const p = document.createElement('p')
         p.innerText = "You Win! Rock beats Scissors!"
         outcomeDiv.appendChild(p)
         playerScore++
-        const h4 = document.createElement('h4')
-        h4.innerText = "The score is " + playerScore + "-" + computerScore
-        outcomeDiv.appendChild(h4)
 
     } else if (playerSelection == ("rock") && computerSelection == "paper") {
         const p = document.createElement('p')
         p.innerText = "You Lose! Rock loses to Paper!"
         outcomeDiv.appendChild(p)
         computerScore++
-        const h4 = document.createElement('h4')
-        h4.innerText = "The score is " + playerScore + "-" + computerScore
-        outcomeDiv.appendChild(h4)
 
     } else if (playerSelection == ("paper") && computerSelection == "rock") {
         const p = document.createElement('p')
         p.innerText = "You Win! Paper beats Rock!"
         outcomeDiv.appendChild(p)
         playerScore++
-        const h4 = document.createElement('h4')
-        h4.innerText = "The score is " + playerScore + "-" + computerScore
-        outcomeDiv.appendChild(h4)
 
     } else if (playerSelection == ("paper") && computerSelection == "scissors") {
         const p = document.createElement('p')
         p.innerText = "You Lose! Paper loses to Scissors!"
         outcomeDiv.appendChild(p)
         computerScore++
-        const h4 = document.createElement('h4')
-        h4.innerText = "The score is " + playerScore + "-" + computerScore
-        outcomeDiv.appendChild(h4)
 
     } else if (playerSelection == ("scissors") && computerSelection == "paper") {
         const p = document.createElement('p')
         p.innerText = "You Win! Scissors beats Paper!"
         outcomeDiv.appendChild(p)
         playerScore++
-        const h4 = document.createElement('h4')
-        h4.innerText = "The score is " + playerScore + "-" + computerScore
-        outcomeDiv.appendChild(h4)
 
     } else if (playerSelection == ("scissors") && computerSelection == "rock") {
         const p = document.createElement('p')
         p.innerText = "You Lose! Scissors loses to Paper!"
         outcomeDiv.appendChild(p)
         computerScore++
-        const h4 = document.createElement('h4')
-        h4.innerText = "The score is " + playerScore + "-" + computerScore
-        outcomeDiv.appendChild(h4)
     }
 }
 
 
-const checkForWinner= (playerScore, computerScore) => {
+const checkForWinner = (playerScore, computerScore) => {
     if (playerScore === 5 || computerScore === 5) {
         if (playerScore === 5) {
             const h3 = document.createElement('h3')
@@ -104,10 +85,17 @@ const checkForWinner= (playerScore, computerScore) => {
     }
 }
 
+const updateScore = (playerScoreSpan, computerScoreSpan) => {
+    playerScoreSpan.innerText = "${playerScore}"
+    computerScoreSpan.innerText = "${computerScore}"
+}
+
+
 rockButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice()
     const playerSelection = 'rock'
     playRound(playerSelection, computerSelection)
+    updateScore(playerScore, computerScore)
     checkForWinner(playerScore, computerScore)
 })
 
@@ -115,6 +103,7 @@ paperButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice()
     const playerSelection = 'paper'
     playRound(playerSelection, computerSelection)
+    updateScore(playerScore, computerScore)
     checkForWinner(playerScore, computerScore)
 })
 
@@ -122,6 +111,7 @@ scissorsButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice()
     const playerSelection = 'scissors'
     playRound(playerSelection, computerSelection)
+    updateScore(playerScore, computerScore)
     checkForWinner(playerScore, computerScore)
 })
 
