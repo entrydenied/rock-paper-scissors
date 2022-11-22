@@ -26,9 +26,6 @@ const array = ['rock', 'paper', 'scissors'];
 */
 
 // Round/Game win/loss messages
-let playerWinRound = "You win the round!"
-let computerWinRound = "You lost the round!"
-let draw = "Draw!"
 let playerWin = "You won the game!"
 let computerWin = "You lost the game!"
 
