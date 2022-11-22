@@ -15,15 +15,6 @@ const getComputerChoice = () => {
     const item = choices[randomIndex];
     return item;
 }
-/** 
-function getComputerChoice (arr) {
-    const randomIndex = Math.floor(Math.random() * arr.length);
-    const item = arr[randomIndex];
-    return item;
-}
-
-const array = ['rock', 'paper', 'scissors'];
-*/
 
 // Round/Game win/loss messages
 let playerWin = "You won the game!"
@@ -78,23 +69,23 @@ function playRound(playerSelection, computerSelection) {
 
 // Plays 5 rounds of Rock, Paper, Scissors
 
-// function game(playRound) {
-//    for (let i = 0; i < 5; i++) {
-//        let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
-//        const computerSelection = getComputerChoice(array);
-//        let roundResult = playRound(playerSelection, computerSelection);
-//        console.log(roundResult);
-//        console.log("The score is " + playerScore + "-" + computerScore);
-//    }
+function game(playRound) { 
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+        const computerSelection = getComputerChoice();
+        let roundResult = playRound(playerSelection, computerSelection);
+        console.log(roundResult);
+        console.log("The score is " + playerScore + "-" + computerScore);
+    }
 
-//    if (playerScore > computerScore) {
-//        console.log("You've won the game. Congratulations!!!");
-//     } else if (playerScore < computerScore) {
-//        console.log("You've lost the game. Nice try.");
-//     } else {
-//        console.log("It's a tie!");
-//     }    
-// }
+    if (playerScore > computerScore) {
+        console.log("You've won the game. Congratulations!!!");
+    } else if (playerScore < computerScore) {
+        console.log("You've lost the game. Nice try.");
+    } else {
+        console.log("It's a tie!");
+    }    
+}
 
 
 
@@ -178,8 +169,19 @@ function gameScore(result) {
     }
 }
 
- */
 
-// Runs the game
-// console.log(game(playRound));
+function getComputerChoice (arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    const item = arr[randomIndex];
+    return item;
+}
+
+const array = ['rock', 'paper', 'scissors'];
+
+Runs the game
+console.log(game(playRound));
+
+*/
+
+
 
