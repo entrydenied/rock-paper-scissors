@@ -36,22 +36,26 @@ let computerWin = "You lost the game!"
 
 
 function playRound(playerSelection, computerSelection) {
-    console.log('1', playerSelection, '2', computerSelection);
     if (playerSelection == computerSelection) {
         const p = document.createElement('p')
-        p.innerText = 'draw';
+        p.innerText = 'draw'
+        outcomeDiv.appendChild(p)
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         const p = document.createElement('p')
-        p.innerText = 'playerWinRound';
+        p.innerText = 'playerWinRound'
+        outcomeDiv.appendChild(p)
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
         const p = document.createElement('p')
-        p.innerText = 'playerWinRound';
+        p.innerText = 'playerWinRound'
+        outcomeDiv.appendChild(p)
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
         const p = document.createElement('p')
-        p.innerText = 'playerWinRound';
+        p.innerText = 'playerWinRound'
+        outcomeDiv.appendChild(p)
     } else { 
         const p = document.createElement('p')
-        p.innerText = 'computerWinRound';
+        p.innerText = 'computerWinRound'
+        outcomeDiv.appendChild(p)
     }
 }
 
