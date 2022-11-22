@@ -5,6 +5,7 @@ const rockButton = document.querySelector('.rock');
 const paperButton = document.querySelector('.paper');
 const scissorsButton = document.querySelector('.scissors');
 const outcomeDiv = document.querySelector('.outcome');
+const scoreDiv = document.querySelector('.score');
 
 // Computer choice
 
@@ -68,13 +69,15 @@ const playRound = (playerSelection, computerSelection) => {
 
 const checkForWinner= (playerScore, computerScore) => {
     if (playerScore === 5 || computerScore === 5) {
-        if (playerScore => 5) {
+        if (playerScore === 5) {
             const h3 = document.createElement('h3')
+            h3.classList.add('player-won')
             h3.innerText = "You've won the game. Congratulations!!!"
             outcomeDiv.appendChild(h3)
     
-        } else if (computerScore => 5) {
+        } else {
             const h3 = document.createElement('h3')
+            h3.classList.add('computer-won')
             h3.innerText = "You've lost the game. Nice try."
             outcomeDiv.appendChild(h3)
         }
@@ -107,21 +110,21 @@ rockButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice()
     const playerSelection = 'rock'
     playRound(playerSelection, computerSelection)
-
+    checkForWinner(playerScore, computerScore)
 })
 
 paperButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice()
     const playerSelection = 'paper'
     playRound(playerSelection, computerSelection)
-
+    checkForWinner(playerScore, computerScore)
 })
 
 scissorsButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice()
     const playerSelection = 'scissors'
     playRound(playerSelection, computerSelection)
-
+    checkForWinner(playerScore, computerScore)
 })
 
 /**  
