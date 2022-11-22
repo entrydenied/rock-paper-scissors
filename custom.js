@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection) {
 
 
 // Plays 5 rounds of Rock, Paper, Scissors
-
+/** 
 function game(playRound) { 
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
@@ -86,7 +86,7 @@ function game(playRound) {
         console.log("It's a tie!");
     }    
 }
-
+*/
 
 
 rockButton.addEventListener('click', () => {
