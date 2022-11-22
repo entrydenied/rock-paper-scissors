@@ -21,7 +21,7 @@ let computerWin = "You lost the game!"
 
 // Plays one round of Rock, Paper, Scissors
 
-function playRound(playerSelection, computerSelection) {
+const playRound = (playerSelection, computerSelection) => {
     if (playerSelection == computerSelection) {
         const p = document.createElement('p')
         p.innerText = "It's a tie!"
@@ -65,6 +65,21 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+
+const checkForWinner= (playerScore, computerScore) => {
+    if (playerScore === 5 || computerScore === 5) {
+        if (playerScore => 5) {
+            const h3 = document.createElement('h3')
+            h3.innerText = "You've won the game. Congratulations!!!"
+            outcomeDiv.appendChild(h3)
+    
+        } else if (computerScore => 5) {
+            const h3 = document.createElement('h3')
+            h3.innerText = "You've lost the game. Nice try."
+            outcomeDiv.appendChild(h3)
+        }
+    }
+}
 
 // Plays 5 rounds of Rock, Paper, Scissors
 /** 
