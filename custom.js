@@ -45,8 +45,8 @@ function playRound(playerSelection, computerSelection) {
 
     } else if (playerSelection == ("rock") && computerSelection == "paper") {
         const p = document.createElement('p')
-        p.innerText = 
-        outcomeDiv.appendChild(p)("You Lose! Rock loses to Paper!")
+        p.innerText = "You Lose! Rock loses to Paper!"
+        outcomeDiv.appendChild(p)
         computerScore++
 
     } else if (playerSelection == ("paper") && computerSelection == "rock") {
