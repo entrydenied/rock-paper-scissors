@@ -85,9 +85,9 @@ const checkForWinner = (playerScore, computerScore) => {
     }
 }
 
-const updateScore = (playerScoreSpan, computerScoreSpan) => {
-    playerScoreSpan.innerText = "${playerScore}"
-    computerScoreSpan.innerText = "${computerScore}"
+const updateScore = (playerScore, computerScore) => {
+    playerScoreSpan.innerText = "Player : " + playerScore
+    computerScoreSpan.innerText = "Computer : " + computerScore
 }
 
 
@@ -116,6 +116,10 @@ scissorsButton.addEventListener('click', () => {
 })
 
 /**  
+
+const h4 = document.createElement('h4')
+h4.innerText = "The score is " + playerScore + "-" + computerScore
+outcomeDiv.appendChild(h4)
 
 const btn = document.querySelector('#button');
 btn.addEventListener('click', ()=> {
